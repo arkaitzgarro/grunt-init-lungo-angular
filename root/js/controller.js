@@ -1,5 +1,10 @@
 function AppCtrl($scope, $location) {
   AppRouter.instance = AppRouter(Lungo, $location, $scope);
+    
+  $scope.triggerAside = function() {
+    console.log('triggering aside');
+    Lungo.Router.aside('main', 'aside1');
+  }    
 }
 
 function DynamicCtrl($scope) {
