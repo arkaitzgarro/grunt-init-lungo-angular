@@ -1,18 +1,14 @@
 {
-  "name": "lungo-angular-bridge",
-  "description": "Bridge between LungoJS and AngularJS",
-  "version": "0.0.1",
-  "main": "./src/lungo-angular-bridge.js",
+  "name": "{%= name %}",
+  "description": "{%= description %}",
+  "version": "{%= version %}",
   "author": {
-    "name": "Centralway Factory"
+    "name": "{%= author %}"
   },
+  "main": "js/app.js",
   "dependencies": {
     "lungo": "latest",
-    "angular": "1.0.4"
-  },
-  "readme": "ERROR: No README.md file found!",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/centralway/lungo-angular-bridge"
+    "angular": "1.0.4",
+    "lungo-angular-bridge": "git@github.com:centralway/lungo-angular-bridge.git"
   }
 }
