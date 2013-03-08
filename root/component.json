@@ -8,7 +8,7 @@
   "main": "js/app.js",
   "dependencies": {
     "lungo": "latest",
-    "angular": "1.0.4",
+    "angular": "1.0.5",
     "lungo-angular-bridge": "git@github.com:centralway/lungo-angular-bridge.git"
   }
 }

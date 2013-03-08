@@ -1,6 +1,4 @@
-function AppCtrl($scope, $location) {
-  AppRouter.instance = AppRouter(Lungo, $location, $scope);
-    
+function AppCtrl($scope, $location) {    
   $scope.triggerAside = function() {
     console.log('triggering aside');
     Lungo.Router.aside('main', 'aside1');
