@@ -6,13 +6,13 @@
         <link rel="stylesheet" type="text/css" href="components/lungo/lungo.icon.css"/>
         <link rel="stylesheet" type="text/css" href="components/lungo/theme.lungo.css">
         <script type="text/javascript" src="components/quojs/quo.debug.js"></script>
-        <script type="text/javascript" src="components/lungo-angular-bridge/lib/lungo.debug.js"></script>
+        <script type="text/javascript" src="components/lungo/lungo.js"></script>
     </head>
     <body class="app" lab-boot>
         <section id="main" data-transition="slide">            
             <header ng-controller="AppCtrl">
                 <nav class="left">
-                    <a href="#aside1" data-icon="menu" ng-click='triggerAside()'></a>
+                    <a data-icon="menu" lab-aside="aside1"></a>
                 </nav>
                 <nav class="right">
                     <a href="#/dynamic">Dynamic</a>
