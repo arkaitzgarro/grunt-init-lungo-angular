@@ -1,4 +1,4 @@
-{}
+{
   "name": "{%= name %}",
   "description": "{%= description %}",
   "version": "{%= version %}",
@@ -9,6 +9,6 @@
   "dependencies": {
     "lungo": "latest",
     "angular": "1.0.6",
-    "lungo-angular-bridge": "git@github.com:centralway/lungo-angular-bridge.git#0.1.1"
+    "lungo-angular-bridge": "git@github.com:centralway/lungo-angular-bridge.git#0.1.2"
   }
 }
