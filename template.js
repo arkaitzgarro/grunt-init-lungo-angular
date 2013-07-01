@@ -1,7 +1,7 @@
 "use strict";
 
 exports.description = "Creates a new Lungo-Angular-Phonegap application";
-exports.after = "You should now run _npm install_ and _bower install_ to install the dependencies";
+exports.after = "You should now run _npm install_ and _node_modules/bower/bin/bower install_ to install the dependencies";
 
 exports.warnOn = "*"; //Warn if dest is not empty
 
