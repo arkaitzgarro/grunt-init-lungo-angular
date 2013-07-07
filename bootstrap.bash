@@ -48,7 +48,7 @@ fi
 if [ -z $SKIP_GRUNT_INIT ]
 then
     echo $'\e[1;33m'"3/4 -- installing grunt-init.."$'\e[00m'
-    npm install -g grunt-init
+    npm install -g grunt-cli grunt-init
 else
     echo $'\e[1;33m'"Skipping step 3..."$'\e[00m'
 fi
