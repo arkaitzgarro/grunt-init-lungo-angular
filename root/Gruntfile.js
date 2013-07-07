@@ -17,14 +17,23 @@ module.exports = function(grunt) {
         src: ["index.html", "Config.xml", "components/**/*.*", "partials/*.html", "app.js", "controller.js"],
         dest: "app.zip"
       }     
-    }
+    },
+    express: {
+        server: {
+            options: {
+                bases: ["./"]
+            }
+        }
+    } 
   });
 
   // Load local tasks.
   grunt.loadNpmTasks('grunt-zipstream');
   grunt.loadNpmTasks('grunt-phonegap-build');
+  grunt.loadNpmTasks('grunt-express');
 
   // Default task.
   grunt.registerTask('default', ['zip', 'phonegap-build']);
+  grunt.registerTask('serve', ['express', 'express-keepalive']);
 };
 

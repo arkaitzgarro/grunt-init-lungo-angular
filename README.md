@@ -55,5 +55,5 @@ and you're done.
 
 Test your fresh app by running a webserver in the project directory, for example via
 
-     $ python -m SimpleHTTPServer
+     $ grunt serve
 and then point your browser at [http://localhost:8000](http://localhost:8000)
