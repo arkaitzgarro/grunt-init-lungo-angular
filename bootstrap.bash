@@ -37,7 +37,7 @@ if [ -z $SKIP_NODE ]
 then
     curl https://raw.github.com/creationix/nvm/master/install.sh | sh
     source ~/.nvm/nvm.sh
-
+    
     echo $'\e[1;33m'"2/4 -- installing node.js.."$'\e[00m'
     nvm install 0.10
     nvm use 0.10
@@ -57,3 +57,4 @@ echo $'\e[1;33m'"4/4 -- installing grunt-init LAB template.."$'\e[00m'
 git clone https://github.com/centralway/grunt-init-lungo-angular.git ~/.grunt-init/lungo-angular-bridge
 
 echo $'\e[1;33m'"DONE!"$'\e[00m'
+exec bash # This allows to use nvm right away without restarting the bash manually
