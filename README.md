@@ -5,7 +5,15 @@
 If you run Linux or Mac OS X you can run the following command in your terminal to install the dependencies:
 
     curl https://raw.github.com/centralway/grunt-init-lungo-angular/master/bootstrap.bash | bash
-which will install ``grunt-init``, ``nvm``, ``node.js`` (v 0.10) and this template for you.
+which will install ``grunt-cli``, ``grunt-init``, ``nvm``, ``node.js (+npm)`` (v 0.10) and this template for you.
+The tools have the following purposes:
+
+* nvm: Node Version Manager - allows you to easily install multiple versions of node.js and switch between them (think of ``rbenv`` or ``rvm`` in Ruby)
+* node.js / npm: Node.js / Node Package Manager - the Javascript runtime for our development tools and its package manager (think of ``gem`` in Ruby)
+* grunt-cli: The CLI part of [Grunt](http://www.gruntjs.org) - Grunt is a build tool that automates tasks like ``ant``, ``make`` or ``rake``
+* grunt-init: The scaffold generator - Grunt-Init allows you to install templates with wizards and scaffolds to speed up the setup process for new projects.
+
+
 After running, you should be able to run
 
     grunt-init
