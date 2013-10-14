@@ -15,7 +15,7 @@ The tools have the following purposes:
 
 
 After running, you should be able to run
-
+    nvm use 0.10.20
     grunt-init
 and see something like this:
 
