@@ -41,13 +41,13 @@ Install grunt-init:
     $ npm install -g grunt-init
 Clone this repository into your ~/.grunt-init folder
     
-    $ git clone git@github.com:centralway/grunt-init-lungo-angular.git ~/.grunt-init/lungo-angular
+    $ git clone git@github.com:centralway/grunt-init-lungo-angular.git ~/.grunt-init/lungo-angular-bridge
 
 ## <a id="create"></a>Create a new app
 Now you can create a new project by creating an empty directory and run grunt-init with the template, like this:
  
      $ mkdir demo && cd demo
-     $ grunt-init lungo-angular
+     $ grunt-init lungo-angular-bridge
 after answering all the questions (you may skip the phonegap related questions, if you're not going to use build.phonegap.com (yet)), you need to install the dependencies by running
 
      $ npm install
