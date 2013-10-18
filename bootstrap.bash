@@ -41,6 +41,7 @@ then
     echo $'\e[1;33m'"2/4 -- installing node.js.."$'\e[00m'
     nvm install 0.10.20
     nvm use 0.10.20
+    nvm alias default 0.10.20
 else
     echo $'\e[1;33m'"Skipping step 1 and 2..."$'\e[00m'
 fi
