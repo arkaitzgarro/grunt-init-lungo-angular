@@ -58,3 +58,33 @@ Test your fresh app by running a webserver in the project directory, for example
 
      $ grunt serve
 and then point your browser at [http://localhost:8000](http://localhost:8000)
+
+## Deploy your app
+We offer two modes of deployment: A local build method and the build.phonegap.com service method.
+
+### Build with build.phonegap.com
+This is the easiest way possible - you don't need to have anything installed on your computer.
+The downside is: It may take some time and doesn't work with all plugins - but it's great to get started!
+
+This is how you get your app on your phone:
+
+1. You sign up at [build.phonegap.com](http://build.phonegap.com)
+2. You create a private app (you have one for free) and upload some .zip file (any file will do for now)
+3. You copy the "App ID" that is displayed next to your new app
+4. You enter it in your ``Gruntfile.js`` or during the initial creation of the project when you're asked for it
+5. You run ``grunt`` and it will try to build you app using the build service.
+6. Install your app by going to [build.phonegap.com](http://build.phonegap.com) in your browser and click on your app. 
+   Use the QR code to install the app on your phone.
+   
+### Build locally
+This method requires some setup on your computer - especially **the SDKs for the platforms you want to support need to be installed**.
+You'll also need ``cordova`` to be installed - to get it on your system, run ``npm install -g cordova``.
+
+Having your computer set up with the SDK and cordova, you run
+
+    grunt prepare-local-build local-build
+and get your app executable from ``mobile/platforms/<PLATFORM NAME>/bin/``, for example ``mobile/platforms/android/bin/HelloWorld-debug.apk``.
+
+You then deploy to your device using the tools from the SDK of that platform.
+**Note:** You only need to run ``prepare-local-build`` once.
+
