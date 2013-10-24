@@ -28,6 +28,21 @@ module.exports = function(grunt) {
         ]
       }     
     },
+    copy: {
+      options: {
+        force: true
+      },
+      mobile: {
+        files: [
+          {src:'index.html',               dest: 'mobile/www', expand: true},
+          {src: 'config.xml',              dest: 'mobile/www', expand: true},
+          {src: 'bower_components/**/*.*', dest: 'mobile/www', expand: true},
+          {src: 'partials/**/*.html',      dest: 'mobile/www', expand: true},
+          {src: 'js/**/*.js',              dest: 'mobile/www', expand: true}
+        ]
+      }
+    },
+
     cordovacli: {
       options: {
         path: 'mobile'
