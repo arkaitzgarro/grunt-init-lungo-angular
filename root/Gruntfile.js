@@ -26,6 +26,31 @@ module.exports = function(grunt) {
         ]
       }     
     },
+    cordovacli: {
+      options: {
+        path: 'mobile'
+      },
+      create: {
+        options: {
+          command: 'create',
+          id: '{%= phonegap_package_name %}',
+          name: '{%= name %}'
+        }
+      },
+      add_platform: {
+        options: {
+          command: 'platform',
+          action: 'add',
+          platforms: ['android']
+        }
+      },
+      build_android: {
+        options: {
+          command: 'build',
+          platforms: ['android']
+        }
+      },
+    },      
     express: {
         server: {
             options: {
@@ -37,11 +62,15 @@ module.exports = function(grunt) {
 
   // Load local tasks.
   grunt.loadNpmTasks('grunt-contrib-compress');
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-phonegap-build');
   grunt.loadNpmTasks('grunt-express');
+  grunt.loadNpmTasks('grunt-cordovacli');
 
   // Default task.
   grunt.registerTask('default', ['compress', 'phonegap-build']);
+  grunt.registerTask('prepare-local-build', ['cordovacli:create', 'cordovacli:add_platform' ]);
+  grunt.registerTask('local-build', ['copy:mobile', 'cordovacli:build_android']);
   grunt.registerTask('serve', ['express', 'express-keepalive']);
 };
 
